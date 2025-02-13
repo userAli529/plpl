@@ -1,0 +1,314 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: #080808;
+}
+
+/* Общие стили для навигации */
+*{
+    color: #cfc8af;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 18px;
+    letter-spacing: 0%;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 100%;
+}
+
+header {
+    background-color: #060d0890;
+    box-shadow: 0 2px 10px rgba(99, 97, 97, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 20px;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+nav ul li {
+    position: relative;
+}
+
+li:hover {
+    color: #cfc8af;
+    cursor: pointer;
+    text-shadow: 0 0 10px #eaeaea;
+}
+
+.al {
+    border: 2px solid #ff0000;
+    border-radius: 11px;
+}
+
+nav ul li a {
+    color: #ff0000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cfc8af;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Стили для выпадающего меню */
+nav ul li div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2a2a2a;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.381);
+    border-radius: 6px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul li:hover div {
+    display: block;
+}
+
+nav ul li div a {
+    padding: 10px 20px;
+    color: #ff0000;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li div a:hover {
+    background-color: #2a2a2a;
+    color: #cfc8af;
+}
+
+/* Активный пункт меню */
+nav ul li.active a {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+/* ------------------main------------------ */
+xmain {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    background-color: rgba(6, 13, 8, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-info h1 {
+    color: #ff0000;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item h2 {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    color: #cfc8af;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.contact-item a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #cfc8af;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    color: #ff0000;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 2px solid #ff0000;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #cfc8af;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #232323;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 20px;
+    }
+    
+    .contact-info h1 {
+        font-size: 14px;
+    }
+    
+    .contact-item h2 {
+        font-size: 14px;
+    }
+}
+
+/* ----------------------------footer------------------ */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #060D08;
+}
+
+.footer-text p {
+    color: #cfc8af;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.contaks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Для очень маленьких экранов (например, телефоны) */
+@media screen and (max-width: 480px) {
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    footer .footer-text p {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}
+
+/* Для очень маленьких экранов (например, телефоны) */
+@media screen and (max-width: 480px) {
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    footer .footer-text p {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}

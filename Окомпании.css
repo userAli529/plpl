@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: #080808;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eagle+Lake&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch+Sans:wght@100..900&display=swap');
+/* Общие стили для навигации */
+*{
+    color: #cfc8af;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 18px;
+    letter-spacing: 0%;
+}
+
+header #logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 100%;
+}
+
+header {
+    background-color: #060d0890;
+    box-shadow: 0 2px 10px rgba(99, 97, 97, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 20px;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+nav ul li {
+    position: relative;
+}
+
+li:hover {
+    color: #cfc8af;
+    cursor: pointer;
+    text-shadow: 0 0 10px #eaeaea;
+}
+
+.al {
+    border: 2px solid #ff0000;
+    border-radius: 11px;
+}
+
+nav ul li a {
+    color: #ff0000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cfc8af;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Стили для выпадающего меню */
+nav ul li div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2a2a2a;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.381);
+    border-radius: 6px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul li:hover div {
+    display: block;
+}
+
+nav ul li div a {
+    padding: 10px 20px;
+    color: #ff0000;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li div a:hover {
+    background-color: #2a2a2a;
+    color: #cfc8af;
+}
+
+/* Активный пункт меню */
+nav ul li.active a {
+    color: #ff0000;
+    font-weight: 600;
+}
+
+/* -------------------------------------------MAIN------------------------------------------- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main section {
+    background-color: #060D08;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+main h1 {
+    color: #ff0000;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+main h2 {
+    color: #ff0000;
+    font-size: 14px;
+    margin: 2rem 0 1rem;
+}
+
+main .about-content {
+    max-width: 900px;
+}
+
+main .about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    color: #cfc8af;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+main ul li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+main ul li::before {
+    content: '•';
+    color: #ff0000;
+    position: absolute;
+    left: 0;
+}
+
+/* ----------------------------footer------------------ */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #060D08;
+}
+
+.footer-text p {
+    color: #cfc8af;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.contaks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* ----------------------------footer------------------ */
+/* Для очень маленьких экранов (например, телефоны) */
+@media screen and (max-width: 480px) {
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    footer .footer-text p {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}
+
+/* Для очень маленьких экранов (например, телефоны) */
+@media screen and (max-width: 480px) {
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    footer .footer-text p {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}
